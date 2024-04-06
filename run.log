@@ -1,0 +1,47 @@
+Running experiment with torch_ddp
+
+[04/06/24 18:53:43] INFO     colossalai - colossalai - INFO: /root/miniconda3/envs/colossal/lib/python3.9/site-packages/colossalai/initialize.py:67 launch                                                                                         
+                    INFO     colossalai - colossalai - INFO: Distributed environment is initialized, world size: 1                                                                                                                                 
+[<colossalai.kernel.extensions.cpu_adam.cpu_adam_x86.CpuAdamX86Extension object at 0x7f26eaca5250>, <colossalai.kernel.extensions.cpu_adam.cpu_adam_arm.CpuAdamArmExtension object at 0x7f26eaca5220>]
+[extension] Compiling the JIT cpu_adam_x86 kernel during runtime now
+[extension] Time taken to compile cpu_adam_x86 op: 0.5120768547058105 seconds
+[<colossalai.kernel.extensions.optimizer.fused_optimizer_cuda.FusedOptimizerCudaExtension object at 0x7f26ebd5dc70>]
+[extension] Compiling the JIT fused_optim_cuda kernel during runtime now
+[extension] Time taken to compile fused_optim_cuda op: 0.41582345962524414 seconds
+{'accuracy': 0.6944927536231884, 'f1': 0.8040163629602083, 'loss': 0.6804165244102478}
+
+Running experiment with torch_ddp_fp16
+
+[04/06/24 18:55:19] INFO     colossalai - colossalai - INFO: /root/miniconda3/envs/colossal/lib/python3.9/site-packages/colossalai/initialize.py:67 launch                                  
+                    INFO     colossalai - colossalai - INFO: Distributed environment is initialized, world size: 1                                                                          
+[<colossalai.kernel.extensions.cpu_adam.cpu_adam_x86.CpuAdamX86Extension object at 0x7f95c2b3ac40>, <colossalai.kernel.extensions.cpu_adam.cpu_adam_arm.CpuAdamArmExtension object at 0x7f95c2b3ac10>]
+[extension] Compiling the JIT cpu_adam_x86 kernel during runtime now
+[extension] Time taken to compile cpu_adam_x86 op: 0.49903106689453125 seconds
+[<colossalai.kernel.extensions.optimizer.fused_optimizer_cuda.FusedOptimizerCudaExtension object at 0x7f95d0ac5820>]
+[extension] Compiling the JIT fused_optim_cuda kernel during runtime now
+[extension] Time taken to compile fused_optim_cuda op: 0.41567325592041016 seconds
+{'accuracy': 0.7107246376811595, 'f1': 0.8097598170034311, 'loss': 0.6481541991233826}
+
+Running experiment with gemini
+
+[04/06/24 18:56:16] INFO     colossalai - colossalai - INFO: /root/miniconda3/envs/colossal/lib/python3.9/site-packages/colossalai/initialize.py:67 launch                                  
+                    INFO     colossalai - colossalai - INFO: Distributed environment is initialized, world size: 1                                                                          
+[<colossalai.kernel.extensions.cpu_adam.cpu_adam_x86.CpuAdamX86Extension object at 0x7fd404da9490>, <colossalai.kernel.extensions.cpu_adam.cpu_adam_arm.CpuAdamArmExtension object at 0x7fd404da9460>]
+[extension] Compiling the JIT cpu_adam_x86 kernel during runtime now
+[extension] Time taken to compile cpu_adam_x86 op: 0.4808945655822754 seconds
+[<colossalai.kernel.extensions.optimizer.fused_optimizer_cuda.FusedOptimizerCudaExtension object at 0x7fd4063c39d0>]
+[extension] Compiling the JIT fused_optim_cuda kernel during runtime now
+[extension] Time taken to compile fused_optim_cuda op: 0.43634891510009766 seconds
+{'accuracy': 0.7031884057971014, 'f1': 0.8079519879969993, 'loss': 0.6931152939796448}
+
+Running experiment with low_level_zero
+
+[04/06/24 18:57:08] INFO     colossalai - colossalai - INFO: /root/miniconda3/envs/colossal/lib/python3.9/site-packages/colossalai/initialize.py:67 launch                                                                                         
+                    INFO     colossalai - colossalai - INFO: Distributed environment is initialized, world size: 1                                                                                                                                 
+[<colossalai.kernel.extensions.cpu_adam.cpu_adam_x86.CpuAdamX86Extension object at 0x7fb9993fbaf0>, <colossalai.kernel.extensions.cpu_adam.cpu_adam_arm.CpuAdamArmExtension object at 0x7fb9993fbac0>]
+[extension] Compiling the JIT cpu_adam_x86 kernel during runtime now
+[extension] Time taken to compile cpu_adam_x86 op: 0.4894554615020752 seconds
+[<colossalai.kernel.extensions.optimizer.fused_optimizer_cuda.FusedOptimizerCudaExtension object at 0x7fb97da753a0>]
+[extension] Compiling the JIT fused_optim_cuda kernel during runtime now
+[extension] Time taken to compile fused_optim_cuda op: 0.41811466217041016 seconds
+{'accuracy': 0.7031884057971014, 'f1': 0.8079519879969993, 'loss': 0.6931152939796448}
